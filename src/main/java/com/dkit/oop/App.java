@@ -53,11 +53,23 @@ public class App
         System.out.println();
 
         System.out.println("Q3 - tests");
+        PrivateProperty pp1 = new PrivateProperty(3, "Emmanuel", "A91AB43", 0, 130, 3, "Apartment");
+        System.out.println(pp1);
 
+        //In this, the equals and hashcode should be accessed seperately as to not interfere with the main class
 
+        System.out.println(pp1.calculateTax(130));
         System.out.println("Q4 - tests");
 
+        PrivateProperty pp2 = new PrivateProperty(3, "Emmanuel", "A91AB43", 0, 130, 3, "Apartment");
+        PrivateProperty pp3 = new PrivateProperty(4, "Emmanuel", "A91AB43", 0, 130, 3, "Apartment");
+        PrivateProperty pp4 = new PrivateProperty(5, "Emmanuel", "A91AB43", 0, 130, 3, "Apartment");
 
+        properties.add(pp2);
+        properties.add(pp3);
+        properties.add(pp4);
+
+        System.out.println();
     }
 }
 

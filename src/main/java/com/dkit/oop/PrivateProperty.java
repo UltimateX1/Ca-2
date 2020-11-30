@@ -22,5 +22,8 @@ private String propertyType;
                 '}';
     }
 
-    //q3
+    protected double calculateTax(int areaInSqMetres)
+    {
+        return (areaInSqMetres * 2.2) + (this.numBeds * 25.00);
+    }
 }

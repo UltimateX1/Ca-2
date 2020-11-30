@@ -21,6 +21,7 @@ public class Property
         this.area = area;
     }
 
+
     public Property(int propertyID, String owner, String postcode, double area, ArrayList<String>facilities)
     {
         this.propertyID = propertyID;
@@ -81,10 +82,60 @@ public class Property
         this.area = area;
     }
 
+    public ArrayList<String> getFacilities() {
+        return facilities;
+    }
+
+    public void setFacilities(ArrayList<String> facilities) {
+        this.facilities = facilities;
+    }
+
     //Aditional Methods
     public void addFacility(String facility)
     {
         this.facilities.add(facility);
         System.out.println("The element has been added to the array");
+    }
+
+    public void removeFacility(String facility)
+    {
+        for(int i = 0; i<=facilities.size(); i++)
+        {
+            if (facility == facilities.get(i))
+            {
+                this.facilities.remove(facility);
+            }
+        }
+    }
+    
+    private double calculateTax(int areaSqMetres)
+    {
+    return (areaSqMetres * 2.2) + 15;
+    }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "propertyID=" + propertyID +
+                ", owner='" + owner + '\'' +
+                ", postcode='" + postcode + '\'' +
+                ", sellingPrice=" + sellingPrice +
+                ", area=" + area +
+                ", facilities=" + facilities +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Property property = (Property) o;
+        return propertyID == property.propertyID &&
+                owner.equals(property.owner);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(propertyID, owner);
     }
 }

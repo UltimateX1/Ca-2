@@ -1,5 +1,7 @@
 package com.dkit.oop;
 
+import java.sql.SQLOutput;
+
 /**
  * OOP - CA#2 - Nov 2020
  * Your Name: Emmanuel Francis
@@ -23,10 +25,17 @@ public class App
         System.out.println("Property p1 details:");
         System.out.println(p1.getPropertyID() + " : " + p1.getOwner() + " : " + p1.getPostcode() + " : " + p1.getSellingPrice() + " : " + p1.getArea());
 
-        Property p2 = new Property(2, "Mary Smith", "A91AB12", 255000, 130);
-        p2.getSellingPrice();
+        Property p2 = new Property(2, "Emmanuel", "A91AB43", 0, 130);
         System.out.println("Property p2 details:");
 
+        p2.addFacility("Mains water");
+        p2.addFacility("electricity");
+        System.out.println(p2);
+
+        System.out.println(p2.getFacilities());
+
+        p2.removeFacility("Mains water");
+        System.out.println("New list " + p2.getFacilities());
 
         System.out.println("Q2 - tests");
 

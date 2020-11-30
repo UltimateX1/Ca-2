@@ -1,6 +1,7 @@
 package com.dkit.oop;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 /**
  * OOP - CA#2 - Nov 2020
@@ -34,11 +35,22 @@ public class App
 
         System.out.println(p2.getFacilities());
 
-        p2.removeFacility("Mains water");
+        //p2.removeFacility("Mains water");
         System.out.println("New list " + p2.getFacilities());
 
-        System.out.println("Q2 - tests");
+        System.out.println(p2.calculateTax(130));
 
+        System.out.println("Q2 - tests");
+        Property p3 = new Property(3, "Emmanuel", "A91AB43", 0, 130);
+        Property p4 = new Property(4, "Emma", "A9132", 0, 45);
+        Property p5 = new Property(5, "Tom", "A91A346", 0, 13);
+
+        ArrayList <Property> properties = new ArrayList<Property>();
+        properties.add(p3);
+        properties.add(p4);
+        properties.add(p5);
+
+        System.out.println();
 
         System.out.println("Q3 - tests");
 

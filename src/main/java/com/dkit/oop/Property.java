@@ -108,10 +108,21 @@ public class Property
         }
     }
     
-    private double calculateTax(int areaSqMetres)
+    protected double calculateTax(int areaSqMetres)
     {
     return (areaSqMetres * 2.2) + 15;
     }
+
+    protected void displayProperties(ArrayList list)
+    {
+        System.out.println("The properties of the String are " + list.toString());
+    }
+
+    /*protected void displayPropertiesPriceAbove(ArrayList list, int boundary)
+    {
+        ()
+       return
+    }*/
 
     @Override
     public String toString() {
